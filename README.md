@@ -7,11 +7,11 @@ cd EasyProxy
 
 
 
-mv easypx /bin
+sudo mv easypx /bin
 
 
 
 
-chmod 777 /bin/easypx
+sudo chmod 777 /bin/easypx
 
 
