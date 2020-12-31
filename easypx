@@ -1,0 +1,65 @@
+#!/bin/bash
+
+figlet $'EasyPX'
+echo $'\nDepends Tor SERVICE, Privoxy, Firefox, W3M to run without errors\n'
+if [ "$1" == "start" ]
+then
+	cmd="sudo service tor $1; sudo service privoxy $1;"
+	eval $cmd
+	echo $'\nPROXY STARTED'
+else
+	if [ "$1" == "stop" ] 
+	then
+		cmd="sudo service tor $1; sudo service privoxy $1;"
+		eval $cmd
+		echo $'\nPROXY STOPPED'
+	else
+		if [ "$1" == "restart" ] 
+		then
+			cmd="sudo service tor $1; sudo service privoxy $1;"
+			eval $cmd
+		else
+			if [ "$1" == "shuffle" ] 
+			then
+				cmd="sudo service tor restart"
+				eval $cmd
+				echo "proxyshuffle successfully"
+				read -t 1 -p "reading ip"
+				echo -e "\n"
+				cmd="torify curl ifconfig.me;"
+				eval $cmd
+				echo -e "\n"
+			else
+				if [ "$1" == "check" ] 
+				then
+					cmd="torify curl ifconfig.me;"
+					eval $cmd
+					echo -e "\n"
+				else
+					if [ "$1" == "nav" ] 
+					then
+						cmd="firefox $2;"
+						eval $cmd
+						echo -e "\n"
+					else
+						if [ "$1" == "dw" ] 
+						then
+							cmd="torify wget $2;"
+							eval $cmd
+							echo -e "\n"
+						else
+							if [ "$1" == "snav" ] 
+							then
+								cmd="torify w3m $2;"
+								eval $cmd
+								echo -e "\n"
+							else
+								echo -e "Argumento inválido, comandos:\nCOMMAND  -  DO\neasypx start - start tor & privoxy\neasypx stop - stop tor & privoxy\neasypx restart - restart tor & privoxy\neasypx shuffle - shuffle ip\neasypx check - check ip\neasypx nav LINKTOWEBSITE - firefox connect LINKTOWEBSITE\neasypx snav LINKTOWEBSITE - W3M (terminal browser) proxy connect to LINKTOWEBSITE\neasypx dw LINKTOARCHIVE - proxy fast & secure download"
+							fi
+						fi
+					fi
+				fi
+			fi
+		fi
+	fi
+fi
