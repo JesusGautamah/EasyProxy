@@ -3,6 +3,4 @@ Shell code for controll proxy using tor and privoxy for Linux(Debian), works wit
 
 Install
 
-cd EasyProxi
-mv easypx /bin
-chmod 777 /bin/easypx
+
