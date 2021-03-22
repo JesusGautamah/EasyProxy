@@ -14,7 +14,7 @@ sudo mv easypx /bin
 
 
 
-sudo chmod 777 /bin/easypx
+sudo chmod +x /bin/easypx
 
 
 # COMMAND  -  DO
