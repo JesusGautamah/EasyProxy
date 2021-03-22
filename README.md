@@ -1,5 +1,5 @@
 # EasyProxy
-Shell code for controll proxy using tor and privoxy for Linux(Debian), works with root proxy configuration, firefox and w3m
+Shell code for controll proxy using tor and privoxy for Linux, works with root proxy configuration, firefox and w3m
 
 # NEED TOR and Privoxy
 
