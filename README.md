@@ -51,7 +51,7 @@ easypx snav LINKTOWEBSITE - W3M (terminal browser) proxy connect to LINKTOWEBSIT
 
 
 
-easypx dw LINKTOARCHIVE - proxy fast & secure download
+
 
 
 
